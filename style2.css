@@ -1,0 +1,1878 @@
+* {
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #ffffff;
+}
+
+
+header {
+    background-color: black;
+    border: 5px solid black;
+}
+
+@media (min-width: 1281px) {
+    .navbar {
+        /* border: 5px solid black; */
+        padding-left: 35px;
+        padding-right: 35px;
+        margin: 10px;
+        /* border: 5px solid red; */
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        /* border: 5px solid red; */
+        list-style: none;
+    }
+    
+    .navbar li a {
+        font-size: 1.3rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px; /* Add some padding for better hover effect */
+        border-radius: 5px; /* Add rounded corners for hover effect */
+    }
+    
+    /* Add hover effect */
+    .navbar li a:hover {
+        color: rgb(0, 0, 0); /* Change text color on hover */
+        color: rgb(48, 151, 253); /* Add background color on hover */
+    }
+    
+
+
+/* SECTION 1 */
+.section-with-bg h1 {
+    font-size: 2.8rem;
+}
+
+.section-with-bg p {
+    font-size: 2rem;
+}
+
+.section-with-bg {
+    position: relative; /* Needed for the overlay to position correctly */
+    background-image: url(./images/pvamu.jpg); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-with-bg::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+
+.flex-container1 {
+    position: relative;
+    z-index: 2; /* Ensures the text is above the overlay */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+/* SECTION 2 */
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* border: 5px solid red; */
+    padding-top: 30px;
+    background-color:fdf0d5;
+}
+
+.div2 {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.div2 h2 {
+    /* border: 5px solid blue; */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.mech-span {
+    color: #888787;
+}
+
+
+.p1, .p2 {
+    line-height: 50px;
+    font-size: 1.3rem;
+}
+
+.p1 {
+    margin-bottom: 20px;
+}
+
+
+.course {
+    color:#888787;
+    font-weight: 555;
+}
+
+
+.engdes img {
+    width: 75%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.engdes img:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+.div3 {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.div3 p {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.p3 {
+    padding-bottom: 0px;
+}
+
+.p4 {
+    margin: 0;
+}
+
+/* CARD SECTION */
+
+.card-container {
+    width: 100%; /* Adjusts width for smaller screens */
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 120px; /* Reduced gap between cards */
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+/* Individual card styles */
+.card {
+    width: 300px; /* Decreased width of each card */
+    max-width: 90%; /* Ensures it shrinks on very small screens */
+    background-color: #000000;
+    color: #fff;
+    border-radius: 15px; /* Slightly less rounding */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image at the top of each card */
+.card-image {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: auto; /* Sets a fixed height for the image */
+    object-fit: cover; /* Ensures the image doesn't distort */
+}
+
+/* Content inside the card */
+.card-content {
+    padding: 15px; /* Adds space around the text */
+    text-align: left;
+}
+
+/* Title styling */
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px; /* Adds space below the title */
+}
+
+/* Metadata (date and category) */
+.card-content .date, .card-content .category {
+    font-size: 12px;
+    color: #cfe3f5; /* Yellow color for metadata */
+}
+
+/* Paragraph text */
+.card-content p {
+    font-size: 15px;
+    line-height: 1.6; /* Adds line spacing for readability */
+    margin-bottom: 20px; /* Adds space below the description */
+    font-weight: 600;
+}
+
+/* Button styling */
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background-color:  #0f91f4; /* Yellow background */
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+}
+
+/* Button hover effect */
+.card-content .btn:hover {
+    background-color: #fff; /* Changes button background to white on hover */
+    color: #000; /* Text color changes to black */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+
+
+/* FRESHMAN: SECTION 3 */
+.div4 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1900px;
+}
+
+.div4 p {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.div4 h4 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+
+.vid-span {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.freshman-span {
+    color: #81bcef;
+}
+
+
+.p4,.p5,.p6,.p7,.p8 {
+    /* border: 5px solid red; */
+    margin: 20px 5px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+
+/* SOPHOMORE YEAR */
+
+.section3 {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+.sadimg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.sadimg img {
+    width: 35%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin: 0 auto;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.sadimg img:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+.div5 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.div5 p {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.div6 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.div6 h4 {
+    font-size: 2.5rem;
+}
+
+.div6 p {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+
+
+/* SOPHOMORE SECTION 4 */
+
+.soph-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+
+}
+
+.soph-imgs img {
+    width: 25%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for more depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Added filter transition */
+    
+    /* Cool filter effect */
+    filter: grayscale(20%) contrast(110%) brightness(90%);
+}
+
+.soph-imgs img:hover {
+    transform: scale(1.05) rotate(1deg); /* Slight enlargement and subtle rotation */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Bigger shadow for a "lifted" effect */
+    filter: grayscale(0%) contrast(120%) brightness(100%); /* Removes grayscale and boosts contrast on hover */
+}
+
+
+.involved {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+
+.involved h3 {
+    font-size: 2.5rem;
+}
+
+.involved p {
+    font-size: 1.2rem;
+    line-height: 50px;
+}
+
+.involved-span {
+    color: #888787;
+}
+
+.spirit-span {
+    font-weight: bold;
+    color: #000000;
+}
+
+.p5 {
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+
+
+/* JUNIOR SECTION */
+
+.jun-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+.jun-sec h1 {
+    font-size: 2.5rem;
+}
+
+.jun-sec p {
+    font-size: 1.2rem;
+    line-height: 50px;
+    padding: 20px;
+}
+
+.jun-sec p a {
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+    font-weight: bold;
+}
+
+
+.social-links {
+    display: flex;
+    margin: 30px;
+    gap: 100px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+}
+
+@media (max-width: 1280px) {
+    .navbar {
+        /* border: 5px solid black; */
+        padding-left: 35px;
+        padding-right: 35px;
+        margin: 10px;
+        /* border: 5px solid red; */
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        /* border: 5px solid red; */
+        list-style: none;
+    }
+    
+    .navbar li a {
+        font-size: 1.3rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px; /* Add some padding for better hover effect */
+        border-radius: 5px; /* Add rounded corners for hover effect */
+    }
+    
+    /* Add hover effect */
+    .navbar li a:hover {
+        color: rgb(0, 0, 0); /* Change text color on hover */
+        color: rgb(48, 151, 253); /* Add background color on hover */
+    }
+    
+
+
+/* SECTION 1 */
+.section-with-bg h1 {
+    font-size: 2.5rem;
+}
+
+.section-with-bg p {
+    font-size: 1.3rem;
+}
+
+.section-with-bg {
+    position: relative; /* Needed for the overlay to position correctly */
+    background-image: url(./images/pvamu.jpg); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-with-bg::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+
+.flex-container1 {
+    position: relative;
+    z-index: 2; /* Ensures the text is above the overlay */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+/* SECTION 2 */
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* border: 5px solid red; */
+    padding-top: 30px;
+    background-color:fdf0d5;
+}
+
+.div2 {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.div2 h2 {
+    /* border: 5px solid blue; */
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.mech-span {
+    color: #888787;
+}
+
+
+.p1, .p2 {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.p1 {
+    margin-bottom: 20px;
+}
+
+
+.course {
+    color:#888787;
+    font-weight: 555;
+}
+
+
+.engdes img {
+    width: 55%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.engdes img:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+.div3 {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.div3 p {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.p3 {
+    padding-bottom: 0px;
+}
+
+.p4 {
+    margin: 0;
+}
+
+/* CARD SECTION */
+
+.card-container {
+    width: 100%; /* Adjusts width for smaller screens */
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Reduced gap between cards */
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+/* Individual card styles */
+.card {
+    width: 300px; /* Decreased width of each card */
+    max-width: 90%; /* Ensures it shrinks on very small screens */
+    background-color: #000000;
+    color: #fff;
+    border-radius: 15px; /* Slightly less rounding */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image at the top of each card */
+.card-image {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: auto; /* Sets a fixed height for the image */
+    object-fit: cover; /* Ensures the image doesn't distort */
+}
+
+/* Content inside the card */
+.card-content {
+    padding: 15px; /* Adds space around the text */
+    text-align: left;
+}
+
+/* Title styling */
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px; /* Adds space below the title */
+}
+
+/* Metadata (date and category) */
+.card-content .date, .card-content .category {
+    font-size: 12px;
+    color: #cfe3f5; /* Yellow color for metadata */
+}
+
+/* Paragraph text */
+.card-content p {
+    font-size: 15px;
+    line-height: 1.6; /* Adds line spacing for readability */
+    margin-bottom: 20px; /* Adds space below the description */
+    font-weight: 600;
+}
+
+/* Button styling */
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background-color:  #0f91f4; /* Yellow background */
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+}
+
+/* Button hover effect */
+.card-content .btn:hover {
+    background-color: #fff; /* Changes button background to white on hover */
+    color: #000; /* Text color changes to black */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+
+
+/* FRESHMAN: SECTION 3 */
+.div4 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.div4 p {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.div4 h4 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+
+.vid-span {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.freshman-span {
+    color: #81bcef;
+}
+
+
+.p4,.p5,.p6,.p7,.p8 {
+    /* border: 5px solid red; */
+    margin: 20px 5px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+
+/* SOPHOMORE YEAR */
+
+.section3 {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.soph-imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sadimg {
+    display: flex;
+    justify-content: center;
+}
+
+
+.sadimg img {
+    width: 35%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.sadimg img:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+.div5 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.div5 p {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+.div6 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.div6 h4 {
+    font-size: 2.5rem;
+}
+
+.div6 p {
+    line-height: 50px;
+    font-size: 20px;
+}
+
+
+
+/* SOPHOMORE SECTION 4 */
+
+.soph-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 auto;
+    /* background-color: black; */
+
+}
+
+.soph-imgs img {
+    width: 30%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for more depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Added filter transition */
+    
+    /* Cool filter effect */
+    filter: grayscale(20%) contrast(110%) brightness(90%);
+}
+
+.soph-imgs img:hover {
+    transform: scale(1.05) rotate(1deg); /* Slight enlargement and subtle rotation */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Bigger shadow for a "lifted" effect */
+    filter: grayscale(0%) contrast(120%) brightness(100%); /* Removes grayscale and boosts contrast on hover */
+}
+
+
+.involved {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+
+.involved h3 {
+    font-size: 2.5rem;
+}
+
+.involved p {
+    font-size: 1.2rem;
+    line-height: 50px;
+}
+
+.involved-span {
+    color: #888787;
+}
+
+.spirit-span {
+    font-weight: bold;
+    color: #000000;
+}
+
+.p5 {
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+
+
+/* JUNIOR SECTION */
+
+.jun-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+
+.jun-sec h1 {
+    font-size: 2.5rem;
+}
+
+.jun-sec p {
+    font-size: 1.2rem;
+    line-height: 50px;
+    padding: 20px;
+}
+
+.jun-sec p a {
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+    font-weight: bold;
+}
+
+
+.social-links {
+    display: flex;
+    margin: 30px;
+    gap: 100px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+}
+
+
+@media (max-width: 780px) {
+    .navbar {
+        /* border: 5px solid black; */
+        padding-left: 35px;
+        padding-right: 35px;
+        margin: 10px;
+        /* border: 5px solid red; */
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        /* border: 5px solid red; */
+        list-style: none;
+    }
+    
+    .navbar li a {
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px; /* Add some padding for better hover effect */
+        border-radius: 5px; /* Add rounded corners for hover effect */
+    }
+    
+    /* Add hover effect */
+    .navbar li a:hover {
+        color: rgb(0, 0, 0); /* Change text color on hover */
+        color: rgb(48, 151, 253); /* Add background color on hover */
+    }
+    
+
+
+/* SECTION 1 */
+.section-with-bg h1 {
+    font-size: 2.2rem;
+}
+
+.section-with-bg p {
+    font-size: 1.2rem;
+}
+
+.section-with-bg {
+    position: relative; /* Needed for the overlay to position correctly */
+    background-image: url(./images/pvamu.jpg); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-with-bg::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+
+.flex-container1 {
+    position: relative;
+    z-index: 2; /* Ensures the text is above the overlay */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+/* SECTION 2 */
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* border: 5px solid red; */
+    padding-top: 30px;
+    background-color:fdf0d5;
+}
+
+.div2 {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.div2 h2 {
+    /* border: 5px solid blue; */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.mech-span {
+    color: #888787;
+}
+
+
+.p1, .p2 {
+    line-height: 50px;
+    font-size: 1.1rem;
+}
+
+.p1 {
+    margin-bottom: 20px;
+}
+
+
+.course {
+    color:#888787;
+    font-weight: 555;
+}
+
+
+.engdes img {
+    width: 55%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.engdes img:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+.div3 {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.div3 p {
+    line-height: 50px;
+    font-size: 1.1rem;
+}
+
+.p3 {
+    padding-bottom: 0px;
+}
+
+.p4 {
+    margin: 0;
+}
+
+/* CARD SECTION */
+
+.card-container {
+    width: 90%; /* Adjusts width for smaller screens */
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Reduced gap between cards */
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+/* Individual card styles */
+.card {
+    width: 250px; /* Decreased width of each card */
+    max-width: 90%; /* Ensures it shrinks on very small screens */
+    background-color: #000000;
+    color: #fff;
+    border-radius: 15px; /* Slightly less rounding */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image at the top of each card */
+.card-image {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: auto; /* Sets a fixed height for the image */
+    object-fit: cover; /* Ensures the image doesn't distort */
+}
+
+/* Content inside the card */
+.card-content {
+    padding: 15px; /* Adds space around the text */
+    text-align: left;
+}
+
+/* Title styling */
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px; /* Adds space below the title */
+}
+
+/* Metadata (date and category) */
+.card-content .date, .card-content .category {
+    font-size: 0.9rem;
+    color: #cfe3f5; /* Yellow color for metadata */
+}
+
+/* Paragraph text */
+.card-content p {
+    font-size: 1rem;
+    line-height: 1.6; /* Adds line spacing for readability */
+    margin-bottom: 20px; /* Adds space below the description */
+    font-weight: 600;
+}
+
+/* Button styling */
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background-color:  #0f91f4; /* Yellow background */
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+}
+
+/* Button hover effect */
+.card-content .btn:hover {
+    background-color: #fff; /* Changes button background to white on hover */
+    color: #000; /* Text color changes to black */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+
+
+/* FRESHMAN: SECTION 3 */
+.div4 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.div4 p {
+    line-height: 50px;
+}
+
+
+
+.vid-span {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.freshman-span {
+    color: #81bcef;
+}
+
+
+.p4,.p5,.p6 {
+    /* border: 5px solid red; */
+    margin: 20px 5px;
+    font-size: 1rem;
+    line-height: 50px;
+}
+
+
+/* SOPHOMORE YEAR */
+
+.soph-imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sadimg {
+    display: flex;
+    justify-content: center;
+}
+
+.div4 h4 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.sadimg img {
+    width: 55%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.sadimg img:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+.div5 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.div5 p {
+    line-height: 50px;
+}
+
+.p7, .p8 {
+    padding: 20px 10px;
+    font-size: 1rem;
+}
+
+
+
+/* SOPHOMORE SECTION 4 */
+
+.soph-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 auto;
+    /* background-color: black; */
+
+}
+
+.soph-imgs img {
+    width: 40%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for more depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Added filter transition */
+    
+    /* Cool filter effect */
+    filter: grayscale(20%) contrast(110%) brightness(90%);
+}
+
+.soph-imgs img:hover {
+    transform: scale(1.05) rotate(1deg); /* Slight enlargement and subtle rotation */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Bigger shadow for a "lifted" effect */
+    filter: grayscale(0%) contrast(120%) brightness(100%); /* Removes grayscale and boosts contrast on hover */
+}
+
+
+.involved {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 650px;
+    text-align: center;
+}
+
+
+.involved h3 {
+    font-size: 2.5rem;
+}
+
+
+.involved-span {
+    color: #888787;
+}
+
+.spirit-span {
+    font-weight: bold;
+    color: #000000;
+}
+
+.p5 {
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+
+
+/* JUNIOR SECTION */
+
+.jun-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+.jun-sec h1 {
+    font-size: 2.2rem;
+}
+
+.jun-sec p {
+    font-size: 1.2rem;
+    line-height: 50px;
+    padding: 20px;
+}
+
+.jun-sec p a {
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+    font-weight: bold;
+}
+
+
+.social-links {
+    display: flex;
+    margin: 30px;
+    gap: 70px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+}
+
+
+@media (max-width: 515px) {
+
+    .navbar {
+        /* border: 5px solid black; */
+        padding-left: 35px;
+        padding-right: 35px;
+        margin: 10px;
+        /* border: 5px solid red; */
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        /* border: 5px solid red; */
+        list-style: none;
+    }
+    
+    .navbar li a {
+        font-size: 0.75rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px; /* Add some padding for better hover effect */
+        border-radius: 5px; /* Add rounded corners for hover effect */
+    }
+    
+    /* Add hover effect */
+    .navbar li a:hover {
+        color: rgb(0, 0, 0); /* Change text color on hover */
+        color: rgb(48, 151, 253); /* Add background color on hover */
+    }
+    
+
+
+/* SECTION 1 */
+.section-with-bg h1 {
+    font-size: 1.8rem;
+}
+
+.section-with-bg p {
+    font-size: 1rem;
+}
+
+.section-with-bg {
+    position: relative; /* Needed for the overlay to position correctly */
+    background-image: url(./images/pvamu.jpg); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-with-bg::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+
+.flex-container1 {
+    position: relative;
+    z-index: 2; /* Ensures the text is above the overlay */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+/* SECTION 2 */
+.section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* border: 5px solid red; */
+    padding-top: 30px;
+    background-color:fdf0d5;
+}
+
+.div2 {
+    padding: 15px;
+}
+
+.div2 h2 {
+    /* border: 5px solid blue; */
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.mech-span {
+    color: #888787;
+}
+
+
+.p1, .p2 {
+    line-height: 40px;
+    font-size: 1rem;
+}
+
+.p1 {
+    margin-bottom: 20px;
+}
+
+
+.course {
+    color:#888787;
+    font-weight: 555;
+}
+
+
+.engdes img {
+    width: 75%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.engdes img:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+.div3 {
+    padding: 10px;
+}
+
+.div3 p {
+    line-height: 50px;
+    font-size: 1rem;
+}
+
+.p3 {
+    padding-bottom: 0px;
+}
+
+.p4 {
+    margin: 0;
+}
+
+/* CARD SECTION */
+
+.card-container {
+    width: 90%; /* Adjusts width for smaller screens */
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Reduced gap between cards */
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+/* Individual card styles */
+.card {
+    width: 250px; /* Decreased width of each card */
+    max-width: 90%; /* Ensures it shrinks on very small screens */
+    background-color: #000000;
+    color: #fff;
+    border-radius: 15px; /* Slightly less rounding */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image at the top of each card */
+.card-image {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: auto; /* Sets a fixed height for the image */
+    object-fit: cover; /* Ensures the image doesn't distort */
+}
+
+/* Content inside the card */
+.card-content {
+    padding: 15px; /* Adds space around the text */
+    text-align: left;
+}
+
+/* Title styling */
+.card-content h3 {
+    font-size: 15px;
+    margin-bottom: 8px; /* Adds space below the title */
+}
+
+/* Metadata (date and category) */
+.card-content .date, .card-content .category {
+    font-size: 10px;
+    color: #cfe3f5; /* Yellow color for metadata */
+}
+
+/* Paragraph text */
+.card-content p {
+    font-size: 12px;
+    line-height: 1.6; /* Adds line spacing for readability */
+    margin-bottom: 20px; /* Adds space below the description */
+    font-weight: 600;
+}
+
+/* Button styling */
+.card-content .btn {
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background-color:  #0f91f4; /* Yellow background */
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+}
+
+/* Button hover effect */
+.card-content .btn:hover {
+    background-color: #fff; /* Changes button background to white on hover */
+    color: #000; /* Text color changes to black */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+
+
+/* FRESHMAN: SECTION 3 */
+.div4 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.div4 p {
+    line-height: 45px;
+    font-size: 1rem;
+}
+
+
+
+.div4 h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+.div4 h4 {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.vid-span {
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.freshman-span {
+    color: #81bcef;
+}
+
+
+/* SOPHOMORE YEAR */
+
+.soph-imgs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sadimg {
+    display: flex;
+    justify-content: center;
+}
+
+
+.sadimg img {
+    width: 85%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.sadimg img:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+.div5 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.div5 p {
+    line-height: 45px;
+    font-size: 1rem;
+}
+
+.p7, .p8 {
+    padding: 20px 10px;
+    font-size: 1rem;
+}
+
+
+
+/* SOPHOMORE SECTION 4 */
+
+.soph-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    /* background-color: black; */
+
+}
+
+.soph-imgs img {
+    width: 50%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px; /* Slightly more rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for more depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Added filter transition */
+    
+    /* Cool filter effect */
+    filter: grayscale(20%) contrast(110%) brightness(90%);
+}
+
+.soph-imgs img:hover {
+    transform: scale(1.05) rotate(1deg); /* Slight enlargement and subtle rotation */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Bigger shadow for a "lifted" effect */
+    filter: grayscale(0%) contrast(120%) brightness(100%); /* Removes grayscale and boosts contrast on hover */
+}
+
+
+.div6 h4 {
+    font-size: 1.9rem;
+    margin: 0;
+}
+
+.div6 p {
+    font-size: 1rem;
+}
+
+.involved {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+
+.involved h3 {
+    font-size: 2rem;
+}
+
+.involved p {
+    font-size: 1rem;
+}
+
+.involved-span {
+    color: #888787;
+}
+
+.spirit-span {
+    font-weight: bold;
+    color: #000000;
+}
+
+.p5 {
+    text-align: center;
+    line-height: 55px;
+
+}
+
+
+
+/* JUNIOR SECTION */
+
+.jun-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.jun-sec h1 {
+    font-size: 2rem;
+}
+
+
+.jun-sec p {
+    font-size: 1rem;
+    line-height: 45px;
+    padding: 20px;
+}
+
+.jun-sec p a {
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+    font-weight: bold;
+}
+
+
+.social-links {
+    display: flex;
+    margin: 30px;
+    gap: 30px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+}
+

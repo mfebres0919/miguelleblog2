@@ -1,0 +1,1681 @@
+* {
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #ffffff;
+}
+
+
+header {
+    background-color: black;
+    border: 5px solid black;
+}
+
+
+
+@media (min-width: 1281px) { 
+
+.navbar {
+    /* border: 5px solid black; */
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 20px;
+    /* border: 5px solid red; */
+}
+
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}
+
+.navbar li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease, color 0.3s ease;
+    padding: 5px 10px; /* Add some padding for better hover effect */
+    border-radius: 5px; /* Add rounded corners for hover effect */
+}
+
+.navbar li a:hover {
+    color: rgb(0, 0, 0); /* Change text color on hover */
+    color: rgb(158, 206, 255); /* Light blue hover color */
+}
+
+
+.navbar svg {
+    width: 75%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+}
+
+
+/* ............................................................................................... */
+
+/* SECTION WITH BACKGROUND */
+
+.section-with-bg h1 {
+    font-size: 3.5rem;
+}
+
+.section-with-bg p {
+    font-size: 1.6rem;
+}
+
+.section-with-bg {
+    position: relative; /* Needed for the overlay to position correctly */
+    background-image: url(./images/computer2.jpeg); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-with-bg::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+
+/* SECTION WITH WORDS INSIDE OF BACKGROUND */
+
+/* Adjust text to be above the overlay */
+.flex-container1 {
+    position: relative;
+    z-index: 2; /* Ensures the text is above the overlay */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+
+
+/* .................................SECTION 1: MY BLOG........................................ */
+
+
+
+.section1 {
+    /* border: 5px solid red; */
+    max-width: 1500px;
+    margin: 0 auto; /* Centers horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.section1 h1 {
+    /* border: 5px solid blue; */
+    margin-top: 30px;
+    font-size: 3rem;
+}
+
+.blog-span {
+    color: #81bcef;
+}
+
+.section1 p {
+    /* border: 5px solid blue; */
+    text-align: center;
+    padding: 20px;
+    line-height: 80px;
+    font-size: 1.6rem;
+    
+}
+
+.section1 img {
+    width: 23%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    border-radius: 10px; /* Adds rounded corners */
+    margin: 20px; /* Adds space around the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.section1 img:hover {
+    transform: scale(1.1); /* Zooms the image by 10% */
+    box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.3); /* Adds a shadow effect */
+}
+
+
+/* ............................................................................................... */
+
+
+
+/* CARD SECTION */
+
+
+/* General container for all cards */
+.card-container {
+    display: flex; /* Places cards side by side */
+    justify-content: center; /* Center aligns the cards horizontally */
+    max-width: 1300px;
+    margin: 0 auto; /* Centers horizontally */
+    flex-wrap: wrap;
+    gap: 100px; /* Adds space between cards */
+    padding: 20px; /* Optional padding around the card container */
+    background-color: #ffffff; /* Black background for the entire section */
+}
+
+/* Individual card styles */
+.card {
+    background-color: #000000; /* Black background for the card */
+    color: #fff; /* White text color */
+    border-radius: 20px; /* Rounded corners for the card */
+    overflow: hidden; /* Ensures the image and content stay within the card */
+    width: 200px; /* Width of each card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Image at the top of each card */
+.card-image {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: 300px; /* Sets a fixed height for the image */
+    object-fit: cover; /* Ensures the image doesn't distort */
+}
+
+/* Content inside the card */
+.card-content {
+    padding: 20px; /* Adds space around the text */
+    text-align: left;
+}
+
+/* Title styling */
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px; /* Adds space below the title */
+}
+
+/* Metadata (date and category) */
+.card-content .date, .card-content .category {
+    font-size: 12px;
+    color: #cfe3f5; /* Yellow color for metadata */
+}
+
+/* Paragraph text */
+.card-content p {
+    font-size:1rem;
+    line-height: 1.6; /* Adds line spacing for readability */
+    margin-bottom: 1rem; /* Adds space below the description */
+    font-weight: 600;
+}
+
+/* Button styling */
+.card-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background-color:  #0f91f4; /* Yellow background */
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+}
+
+/* Button hover effect */
+.card-content .btn:hover {
+    background-color: #fff; /* Changes button background to white on hover */
+    color: #000; /* Text color changes to black */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+/* ............................................................................................... */
+
+/* PROGRESS SECTION */
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+    /* border: 5px solid red; */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.progress * {
+   color: rgb(0, 0, 0);
+}
+
+.progress h1 {
+    /* border: 5px solid red; */
+    padding-bottom: 20px;
+    margin-top: 80px;
+    font-size: 3.2rem;
+}
+
+
+.updates-span {
+    color: #81bcef;
+}
+
+
+.progress p {
+    line-height: 30px;
+    font-size: 22px;
+}
+.progress .p2 {
+    padding-top: 30px;
+}
+
+
+
+/* CARD CONTAINER 2  */
+
+.card-container2 {
+    display: flex; /* Places cards side by side */
+    justify-content: center; /* Center aligns the cards horizontally */
+    flex-wrap: wrap;
+    padding: 20px; /* Optional padding around the card container */
+    background-color: #ffffff; /* Black background for the entire section */
+}
+
+/* Individual card styles */
+.card {
+    background-color: #000000; /* Black background for the card */
+    color: #fff; /* White text color */
+    border-radius: 20px; /* Rounded corners for the card */
+    overflow: hidden; /* Ensures the image and content stay within the card */
+    width: 350px; /* Width of each card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+
+/* Content inside the card */
+.card-content2 {
+    padding: 20px; /* Adds space around the text */
+    text-align: left;
+}
+
+/* Title styling */
+.card-content2 h3 {
+    font-size: 2rem;
+    margin-bottom: 10px; /* Adds space below the title */
+    color: #cfe3f5;
+}
+
+/* Metadata (date and category) */
+.card-content2 .date, .card-content .category {
+    font-size: 12px;
+    color: #cfe3f5; /* Yellow color for metadata */
+}
+
+/* Paragraph text */
+.card-content2 p {
+    font-size: 1.2rem;
+    line-height: 1.6; /* Adds line spacing for readability */
+    margin-bottom: 20px; /* Adds space below the description */
+    font-weight: 600;
+    /* border: 5px solid red; */
+}
+
+/* Button styling */
+.card-content2 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background-color:  #0f91f4; /* Yellow background */
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+}
+
+/* Button hover effect */
+.card-content2 .btn:hover {
+    background-color: #fff; /* Changes button background to white on hover */
+    color: #000; /* Text color changes to black */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+
+/* .....................................SECTION 3.............................................. */
+
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* border: 5px solid red; */
+    max-width:1200px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    margin: 10px;
+    font-size: 3.2rem;
+
+}
+
+#contact p {
+    line-height: 60px;
+    font-size: 1.6rem;
+}
+
+.touch-span {
+    color: #81bcef;
+}
+
+
+/* SOCIAL MEDIA LINKS */
+.social-links {
+    display: flex;
+    margin: 30px;
+    gap: 50px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: rgb(48, 151, 253); /* Light blue hover color */
+}
+
+.social-links h5 {
+    font-size: 1.5rem;
+}
+
+
+.social-links h5 svg {
+    margin-right: 0px;
+    transition: color 0.3s ease;
+}
+
+.social-links h5 svg:hover {
+    color: rgb(48, 151, 253); /* Light blue hover color */
+}
+
+
+
+}
+
+
+
+
+
+@media (max-width: 1280px) {
+
+    .navbar {
+        /* border: 5px solid black; */
+        padding-left: 25px;
+        padding-right: 25px;
+        margin: 20px;
+        /* border: 5px solid red; */
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        list-style: none;
+    }
+    
+    .navbar li a {
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px; /* Add some padding for better hover effect */
+        border-radius: 5px; /* Add rounded corners for hover effect */
+    }
+    
+
+    .navbar li a:hover {
+        color: rgb(0, 0, 0); /* Change text color on hover */
+        color: rgb(48, 151, 253); /* Add background color on hover */
+    }
+
+
+    .navbar svg {
+        width: 55%; /* Adjusts the width of the image */
+        max-width: 100%; /* Ensures the image can never be larger than its container */
+        height: auto; /* Ensures the height adjusts automatically based on the width */
+    }
+
+
+    /* ............................................................................................... */
+    
+    /* SECTION WITH BACKGROUND */
+    
+    .section-with-bg h1 {
+        font-size: 75px;
+    }
+    
+    .section-with-bg p {
+        font-size: 30px;
+    }
+    
+
+    
+    .section-with-bg {
+        position: relative; /* Needed for the overlay to position correctly */
+        background-image: url(./images/computer2.jpeg); /* Update the path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 35vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section-with-bg::before {
+        content: ""; /* Required for pseudo-elements */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+        z-index: 1; /* Place the overlay behind the text */
+    }
+    
+    
+    /* SECTION WITH WORDS INSIDE OF BACKGROUND */
+    
+    /* Adjust text to be above the overlay */
+    .flex-container1 {
+        position: relative;
+        z-index: 2; /* Ensures the text is above the overlay */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+    }
+    
+    
+    
+    /* .................................SECTION 1: MY BLOG........................................ */
+    
+    
+    
+    .section1 {
+        /* border: 5px solid red; */
+        max-width: 900px;
+        margin: 0 auto; /* Centers horizontally */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+    .section1 h1 {
+        /* border: 5px solid blue; */
+        margin-top: 30px;
+        font-size: 55px;
+    }
+    
+    .blog-span {
+        color: #81bcef;
+    }
+    
+    .section1 p {
+        /* border: 5px solid blue; */
+        text-align: center;
+        padding: 20px;
+        line-height: 40px;
+        font-size: 22px;
+        
+    }
+    
+    .section1 img {
+        width: 40%; /* Adjusts the width of the image */
+        max-width: 100%; /* Ensures the image can never be larger than its container */
+        height: auto; /* Ensures the height adjusts automatically based on the width */
+        border-radius: 10px; /* Adds rounded corners */
+        margin: 20px; /* Adds space around the image */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    }
+    
+    .section1 img:hover {
+        transform: scale(1.1); /* Zooms the image by 10% */
+        box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.3); /* Adds a shadow effect */
+    }
+    
+    
+    /* ............................................................................................... */
+    
+    
+    
+    /* CARD SECTION */
+    
+    
+    /* General container for all cards */
+    .card-container {
+        display: flex; /* Places cards side by side */
+        justify-content: center; /* Center aligns the cards horizontally */
+        max-width: 700px;
+        margin: 0 auto; /* Centers horizontally */
+        flex-wrap: wrap;
+        gap: 50px; /* Adds space between cards */
+        padding: 20px; /* Optional padding around the card container */
+        background-color: #ffffff; /* Black background for the entire section */
+    }
+    
+    /* Individual card styles */
+    .card {
+        background-color: #000000; /* Black background for the card */
+        color: #fff; /* White text color */
+        border-radius: 20px; /* Rounded corners for the card */
+        overflow: hidden; /* Ensures the image and content stay within the card */
+        width: 300px; /* Width of each card */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    }
+    
+    /* Image at the top of each card */
+    .card-image {
+        width: 100%; /* Ensures the image takes the full width of the card */
+        height: 200px; /* Sets a fixed height for the image */
+        object-fit: cover; /* Ensures the image doesn't distort */
+    }
+    
+    /* Content inside the card */
+    .card-content {
+        padding: 20px; /* Adds space around the text */
+        text-align: left;
+    }
+    
+    /* Title styling */
+    .card-content h3 {
+        font-size: 18px;
+        margin-bottom: 10px; /* Adds space below the title */
+    }
+    
+    /* Metadata (date and category) */
+    .card-content .date, .card-content .category {
+        font-size: 12px;
+        color: #cfe3f5; /* Yellow color for metadata */
+    }
+    
+    /* Paragraph text */
+    .card-content p {
+        font-size: 14px;
+        line-height: 1.6; /* Adds line spacing for readability */
+        margin-bottom: 20px; /* Adds space below the description */
+        font-weight: 600;
+    }
+    
+    /* Button styling */
+    .card-content .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        background-color:  #0f91f4; /* Yellow background */
+        border-radius: 5px; /* Rounded button */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+    }
+    
+    /* Button hover effect */
+    .card-content .btn:hover {
+        background-color: #fff; /* Changes button background to white on hover */
+        color: #000; /* Text color changes to black */
+        transform: scale(1.05); /* Slightly enlarges button on hover */
+    }
+    
+    /* Card hover effect */
+    .card:hover {
+        transform: translateY(-10px); /* Moves the card up slightly on hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+    }
+    
+    /* ............................................................................................... */
+    
+    /* PROGRESS SECTION */
+    
+    .progress {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 60px;
+        /* border: 5px solid red; */
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .progress * {
+       color: rgb(0, 0, 0);
+    }
+    
+    .progress h1 {
+        /* border: 5px solid red; */
+        padding-bottom: 20px;
+        margin-top: 80px;
+        font-size: 55px;
+    }
+    
+    
+    .updates-span {
+        color: #81bcef;
+    }
+    
+    
+    .progress p {
+        line-height: 30px;
+        font-size: 22px;
+    }
+    .progress .p2 {
+        padding-top: 30px;
+    }
+    
+    
+    
+    /* CARD CONTAINER 2  */
+    
+    .card-container2 {
+        display: flex; /* Places cards side by side */
+        justify-content: center; /* Center aligns the cards horizontally */
+        flex-wrap: wrap;
+        gap: 50px; /* Adds space between cards */
+        padding: 20px; /* Optional padding around the card container */
+        background-color: #ffffff; /* Black background for the entire section */
+    }
+    
+    /* Individual card styles */
+    .card {
+        background-color: #000000; /* Black background for the card */
+        color: #fff; /* White text color */
+        border-radius: 20px; /* Rounded corners for the card */
+        overflow: hidden; /* Ensures the image and content stay within the card */
+        width: 300px; /* Width of each card */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    }
+    
+    /* Image at the top of each card */
+    .card-image {
+        width: 100%; /* Ensures the image takes the full width of the card */
+        height: 200px; /* Sets a fixed height for the image */
+        object-fit: cover; /* Ensures the image doesn't distort */
+    }
+    
+    /* Content inside the card */
+    .card-content2 {
+        padding: 20px; /* Adds space around the text */
+        text-align: left;
+    }
+    
+    /* Title styling */
+    .card-content2 h3 {
+        font-size: 18px;
+        margin-bottom: 10px; /* Adds space below the title */
+        color: #cfe3f5;
+    }
+    
+    /* Metadata (date and category) */
+    .card-content2 .date, .card-content .category {
+        font-size: 12px;
+        color: #cfe3f5; /* Yellow color for metadata */
+    }
+    
+    /* Paragraph text */
+    .card-content2 p {
+        font-size: 14px;
+        line-height: 1.6; /* Adds line spacing for readability */
+        margin-bottom: 20px; /* Adds space below the description */
+        font-weight: 600;
+        /* border: 5px solid red; */
+    }
+    
+    /* Button styling */
+    .card-content2 .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        background-color:  #0f91f4; /* Yellow background */
+        border-radius: 5px; /* Rounded button */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+    }
+    
+    /* Button hover effect */
+    .card-content2 .btn:hover {
+        background-color: #fff; /* Changes button background to white on hover */
+        color: #000; /* Text color changes to black */
+        transform: scale(1.05); /* Slightly enlarges button on hover */
+    }
+    
+    /* Card hover effect */
+    .card:hover {
+        transform: translateY(-10px); /* Moves the card up slightly on hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+    }
+    
+    
+    
+    /* .....................................SECTION 3.............................................. */
+    
+    .custom-hr {
+        width: 90%;  /* Adjust the width to control the length of the line */
+        margin: 20px auto;  /* Centers the line and adds space above and below */
+        border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+    }
+    
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* border: 5px solid red; */
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    #contact h2 {
+        margin: 10px;
+        font-size: 35px;
+    
+    }
+    
+    #contact p {
+        line-height: 30px;
+        font-size: 18px;
+    }
+    
+    .touch-span {
+        color: #81bcef;
+    }
+    
+    
+    /* SOCIAL MEDIA LINKS */
+    .social-links {
+        display: flex;
+        margin: 30px;
+        gap: 50px;
+    }
+    
+    .social-links a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 780px) {/* NAVIGATION BAR SECTION */
+    .navbar {
+        /* border: 5px solid black; */
+        padding-left: 25px;
+        padding-right: 25px;
+        margin: 20px;
+        /* border: 5px solid red; */
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+    }
+    
+    .navbar li a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px; /* Add some padding for better hover effect */
+        border-radius: 5px; /* Add rounded corners for hover effect */
+    }
+    
+    /* Add hover effect */
+    .navbar li a:hover {
+        color: rgb(0, 0, 0); /* Change text color on hover */
+        color: rgb(48, 151, 253); /* Add background color on hover */
+    }
+    
+    /* ............................................................................................... */
+    
+    /* SECTION WITH BACKGROUND */
+    
+    .section-with-bg h1 {
+        font-size: 45px;
+    }
+    
+    .section-with-bg p {
+        font-size: 20px;
+    }
+    
+
+    
+    .section-with-bg {
+        position: relative; /* Needed for the overlay to position correctly */
+        background-image: url(./images/computer2.jpeg); /* Update the path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 35vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section-with-bg::before {
+        content: ""; /* Required for pseudo-elements */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+        z-index: 1; /* Place the overlay behind the text */
+    }
+    
+    
+    /* SECTION WITH WORDS INSIDE OF BACKGROUND */
+    
+    /* Adjust text to be above the overlay */
+    .flex-container1 {
+        position: relative;
+        z-index: 2; /* Ensures the text is above the overlay */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+    }
+    
+    
+    
+    /* .................................SECTION 1: MY BLOG........................................ */
+    
+    
+    
+    .section1 {
+        /* border: 5px solid red; */
+        max-width: 750px;
+        margin: 0 auto; /* Centers horizontally */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+    .section1 h1 {
+        /* border: 5px solid blue; */
+        margin-top: 30px;
+        font-size: 45px;
+    }
+    
+    .blog-span {
+        color: #81bcef;
+    }
+    
+    .section1 p {
+        /* border: 5px solid blue; */
+        text-align: center;
+        padding: 20px;
+        line-height: 50px;
+        font-size: 1.4rem;
+        
+    }
+    
+    .section1 img {
+        width: 45%; /* Adjusts the width of the image */
+        max-width: 100%; /* Ensures the image can never be larger than its container */
+        height: auto; /* Ensures the height adjusts automatically based on the width */
+        border-radius: 10px; /* Adds rounded corners */
+        margin: 20px; /* Adds space around the image */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    }
+    
+    .section1 img:hover {
+        transform: scale(1.1); /* Zooms the image by 10% */
+        box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.3); /* Adds a shadow effect */
+    }
+    
+    
+    /* ............................................................................................... */
+    
+    
+    
+    /* CARD SECTION */
+    
+    
+    /* General container for all cards */
+    .card-container {
+        display: flex; /* Places cards side by side */
+        justify-content: center; /* Center aligns the cards horizontally */
+        max-width: 1200px;
+        margin: 0 auto; /* Centers horizontally */
+        flex-wrap: wrap;
+        gap: 50px; /* Adds space between cards */
+        padding: 20px; /* Optional padding around the card container */
+        background-color: #ffffff; /* Black background for the entire section */
+    }
+    
+    /* Individual card styles */
+    .card {
+        background-color: #000000; /* Black background for the card */
+        color: #fff; /* White text color */
+        border-radius: 20px; /* Rounded corners for the card */
+        overflow: hidden; /* Ensures the image and content stay within the card */
+        width: 300px; /* Width of each card */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    }
+    
+    /* Image at the top of each card */
+    .card-image {
+        width: 100%; /* Ensures the image takes the full width of the card */
+        height: 200px; /* Sets a fixed height for the image */
+        object-fit: cover; /* Ensures the image doesn't distort */
+    }
+    
+    /* Content inside the card */
+    .card-content {
+        padding: 20px; /* Adds space around the text */
+        text-align: left;
+    }
+    
+    /* Title styling */
+    .card-content h3 {
+        font-size: 18px;
+        margin-bottom: 10px; /* Adds space below the title */
+    }
+    
+    /* Metadata (date and category) */
+    .card-content .date, .card-content .category {
+        font-size: 12px;
+        color: #cfe3f5; /* Yellow color for metadata */
+    }
+    
+    /* Paragraph text */
+    .card-content p {
+        font-size: 14px;
+        line-height: 1.6; /* Adds line spacing for readability */
+        margin-bottom: 20px; /* Adds space below the description */
+        font-weight: 600;
+    }
+    
+    /* Button styling */
+    .card-content .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        background-color:  #0f91f4; /* Yellow background */
+        border-radius: 5px; /* Rounded button */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+    }
+    
+    /* Button hover effect */
+    .card-content .btn:hover {
+        background-color: #fff; /* Changes button background to white on hover */
+        color: #000; /* Text color changes to black */
+        transform: scale(1.05); /* Slightly enlarges button on hover */
+    }
+    
+    /* Card hover effect */
+    .card:hover {
+        transform: translateY(-10px); /* Moves the card up slightly on hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+    }
+    
+    
+    /* ............................................................................................... */
+    
+    /* PROGRESS SECTION */
+    
+    .progress {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 60px;
+        /* border: 5px solid red; */
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .progress * {
+       color: rgb(0, 0, 0);
+    }
+    
+    .progress h1 {
+        /* border: 5px solid red; */
+        padding-bottom: 20px;
+        font-size: 45px;
+    }
+    
+    
+    .updates-span {
+        color: #81bcef;
+    }
+    
+    
+    .progress p {
+        line-height: 30px;
+        font-size: 18px;
+    }
+    .progress .p2 {
+        padding-top: 30px;
+    }
+    
+    
+    
+    /* CARD CONTAINER 2  */
+    
+    .card-container2 {
+        display: flex; /* Places cards side by side */
+        justify-content: center; /* Center aligns the cards horizontally */
+        flex-wrap: wrap;
+        gap: 50px; /* Adds space between cards */
+        padding: 20px; /* Optional padding around the card container */
+        background-color: #ffffff; /* Black background for the entire section */
+    }
+    
+    /* Individual card styles */
+    .card {
+        background-color: #000000; /* Black background for the card */
+        color: #fff; /* White text color */
+        border-radius: 20px; /* Rounded corners for the card */
+        overflow: hidden; /* Ensures the image and content stay within the card */
+        width: 300px; /* Width of each card */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    }
+    
+    /* Image at the top of each card */
+    .card-image {
+        width: 100%; /* Ensures the image takes the full width of the card */
+        height: 200px; /* Sets a fixed height for the image */
+        object-fit: cover; /* Ensures the image doesn't distort */
+    }
+    
+    /* Content inside the card */
+    .card-content2 {
+        padding: 20px; /* Adds space around the text */
+        text-align: left;
+    }
+    
+    /* Title styling */
+    .card-content2 h3 {
+        font-size: 18px;
+        margin-bottom: 10px; /* Adds space below the title */
+        color: #cfe3f5;
+    }
+    
+    /* Metadata (date and category) */
+    .card-content2 .date, .card-content .category {
+        font-size: 12px;
+        color: #cfe3f5; /* Yellow color for metadata */
+    }
+    
+    /* Paragraph text */
+    .card-content2 p {
+        font-size: 14px;
+        line-height: 1.6; /* Adds line spacing for readability */
+        margin-bottom: 20px; /* Adds space below the description */
+        font-weight: 600;
+        /* border: 5px solid red; */
+    }
+    
+    /* Button styling */
+    .card-content2 .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        background-color:  #0f91f4; /* Yellow background */
+        border-radius: 5px; /* Rounded button */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+    }
+    
+    /* Button hover effect */
+    .card-content2 .btn:hover {
+        background-color: #fff; /* Changes button background to white on hover */
+        color: #000; /* Text color changes to black */
+        transform: scale(1.05); /* Slightly enlarges button on hover */
+    }
+    
+    /* Card hover effect */
+    .card:hover {
+        transform: translateY(-10px); /* Moves the card up slightly on hover */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+    }
+    
+    
+    
+    /* .....................................SECTION 3.............................................. */
+    
+    .custom-hr {
+        width: 90%;  /* Adjust the width to control the length of the line */
+        margin: 20px auto;  /* Centers the line and adds space above and below */
+        border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+    }
+    
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        /* border: 5px solid red; */
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    #contact h2 {
+        margin: 10px;
+        font-size: 35px;
+    
+    }
+    
+    #contact p {
+        line-height: 30px;
+        font-size: 18px;
+    }
+    
+    .touch-span {
+        color: #81bcef;
+    }
+    
+    
+    /* SOCIAL MEDIA LINKS */
+    .social-links {
+        display: flex;
+        margin: 30px;
+        gap: 50px;
+    }
+    
+    .social-links a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+    }
+    }
+
+
+
+
+
+
+@media (max-width: 515px) {
+   
+    
+/* NAVIGATION BAR SECTION */
+.navbar {
+    /* border: 5px solid black; */
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 20px;
+    /* border: 5px solid red; */
+}
+
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    list-style: none;
+}
+
+.navbar li a {
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease, color 0.3s ease;
+    padding: 5px 10px; /* Add some padding for better hover effect */
+    border-radius: 5px; /* Add rounded corners for hover effect */
+}
+
+/* Add hover effect */
+.navbar li a:hover {
+    color: rgb(0, 0, 0); /* Change text color on hover */
+    color: rgb(48, 151, 253); /* Add background color on hover */
+}
+
+/* ............................................................................................... */
+
+/* SECTION WITH BACKGROUND */
+
+.section-with-bg h1 {
+    font-size: 30px;
+    padding: 10px;
+}
+
+.section-with-bg p {
+    font-size: 15px;
+}
+
+.section-with-bg {
+    position: relative; /* Needed for the overlay to position correctly */
+    background-image: url(./images/computer2.jpeg); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-with-bg::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+
+/* SECTION WITH WORDS INSIDE OF BACKGROUND */
+
+/* Adjust text to be above the overlay */
+.flex-container1 {
+    position: relative;
+    z-index: 2; /* Ensures the text is above the overlay */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+
+
+/* .................................SECTION 1: MY BLOG........................................ */
+
+
+
+.section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 5px solid red; */
+}
+
+
+.section1 h1 {
+    /* border: 5px solid blue; */
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.blog-span {
+    color: #81bcef;
+}
+
+.section1 p {
+    /* border: 5px solid blue; */
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    line-height: 30px;
+    
+}
+
+.section1 img {
+    width: 65%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    border-radius: 10px; /* Adds rounded corners */
+    margin: 20px; /* Adds space around the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.section1 img:hover {
+    transform: scale(1.1); /* Zooms the image by 10% */
+    box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.3); /* Adds a shadow effect */
+}
+
+
+/* ............................................................................................... */
+
+
+
+/* CARD SECTION */
+
+
+/* General container for all cards */
+.card-container {
+    display: flex; /* Places cards side by side */
+    justify-content: center; /* Center aligns the cards horizontally */
+    max-width: 700px;
+    margin: 0 auto; /* Centers horizontally */
+    flex-wrap: wrap;
+    gap: 50px; /* Adds space between cards */
+    padding: 20px; /* Optional padding around the card container */
+    background-color: #ffffff; /* Black background for the entire section */
+}
+
+/* Individual card styles */
+.card {
+    background-color: #000000; /* Black background for the card */
+    color: #fff; /* White text color */
+    border-radius: 20px; /* Rounded corners for the card */
+    overflow: hidden; /* Ensures the image and content stay within the card */
+    width: 300px; /* Width of each card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Image at the top of each card */
+.card-image {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: 200px; /* Sets a fixed height for the image */
+    object-fit: cover; /* Ensures the image doesn't distort */
+}
+
+/* Content inside the card */
+.card-content {
+    padding: 20px; /* Adds space around the text */
+    text-align: left;
+}
+
+/* Title styling */
+.card-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px; /* Adds space below the title */
+}
+
+/* Metadata (date and category) */
+.card-content .date, .card-content .category {
+    font-size: 12px;
+    color: #cfe3f5; /* Yellow color for metadata */
+}
+
+/* Paragraph text */
+.card-content p {
+    font-size: 14px;
+    line-height: 1.6; /* Adds line spacing for readability */
+    margin-bottom: 20px; /* Adds space below the description */
+    font-weight: 600;
+}
+
+/* Button styling */
+.card-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background-color:  #0f91f4; /* Yellow background */
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+}
+
+/* Button hover effect */
+.card-content .btn:hover {
+    background-color: #fff; /* Changes button background to white on hover */
+    color: #000; /* Text color changes to black */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+/* ............................................................................................... */
+
+/* PROGRESS SECTION */
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+    /* border: 5px solid red; */
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.progress * {
+   color: rgb(0, 0, 0);
+}
+
+.progress h1 {
+    /* border: 5px solid red; */
+    padding-bottom: 20px;
+    margin-top: 20px;
+    font-size: 33px;
+}
+
+
+.updates-span {
+    color: #81bcef;
+}
+
+
+.progress p {
+    line-height: 30px;
+    font-size: 15px;
+}
+.progress .p2 {
+    padding-top: 30px;
+}
+
+
+
+/* CARD CONTAINER 2  */
+
+.card-container2 {
+    display: flex; /* Places cards side by side */
+    justify-content: center; /* Center aligns the cards horizontally */
+    flex-wrap: wrap;
+    gap: 50px; /* Adds space between cards */
+    padding: 20px; /* Optional padding around the card container */
+    background-color: #ffffff; /* Black background for the entire section */
+}
+
+/* Individual card styles */
+.card {
+    background-color: #000000; /* Black background for the card */
+    color: #fff; /* White text color */
+    border-radius: 20px; /* Rounded corners for the card */
+    overflow: hidden; /* Ensures the image and content stay within the card */
+    width: 300px; /* Width of each card */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+/* Image at the top of each card */
+.card-image {
+    width: 100%; /* Ensures the image takes the full width of the card */
+    height: 200px; /* Sets a fixed height for the image */
+    object-fit: cover; /* Ensures the image doesn't distort */
+}
+
+/* Content inside the card */
+.card-content2 {
+    padding: 20px; /* Adds space around the text */
+    text-align: left;
+}
+
+/* Title styling */
+.card-content2 h3 {
+    font-size: 18px;
+    margin-bottom: 10px; /* Adds space below the title */
+    color: #cfe3f5;
+}
+
+/* Metadata (date and category) */
+.card-content2 .date, .card-content .category {
+    font-size: 12px;
+    color: #cfe3f5; /* Yellow color for metadata */
+}
+
+/* Paragraph text */
+.card-content2 p {
+    font-size: 14px;
+    line-height: 1.6; /* Adds line spacing for readability */
+    margin-bottom: 20px; /* Adds space below the description */
+    font-weight: 600;
+}
+
+/* Button styling */
+.card-content2 .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    background-color:  #0f91f4; /* Yellow background */
+    border-radius: 5px; /* Rounded button */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover effect */
+}
+
+/* Button hover effect */
+.card-content2 .btn:hover {
+    background-color: #fff; /* Changes button background to white on hover */
+    color: #000; /* Text color changes to black */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+
+
+
+/* .....................................SECTION 3.............................................. */
+
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+#contact h2 {
+    margin: 10px;
+    font-size: 35px;
+
+}
+
+#contact p {
+    line-height: 30px;
+    padding: 20px;
+    font-size: 15px;
+
+}
+
+.touch-span {
+    color: #81bcef;
+}
+
+
+/* SOCIAL MEDIA LINKS */
+.social-links {
+    display: flex;
+    margin: 30px;
+    gap: 50px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+

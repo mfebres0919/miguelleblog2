@@ -1,0 +1,737 @@
+* {
+    font-family: "Poppins", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #ffffff;
+}
+
+
+header {
+    background-color: black;
+    border: 5px solid black;
+}
+
+@media (min-width: 1281px) {
+    .navbar {
+        /* border: 5px solid black; */
+        padding-left: 35px;
+        padding-right: 35px;
+        margin: 30px;
+        /* border: 5px solid red; */
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 65px;
+        /* border: 5px solid red; */
+        list-style: none;
+    }
+    
+    .navbar li a {
+        font-size: 2rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px; /* Add some padding for better hover effect */
+        border-radius: 5px; /* Add rounded corners for hover effect */
+    }
+    
+    /* Add hover effect */
+    .navbar li a:hover {
+        color: rgb(0, 0, 0); /* Change text color on hover */
+        color: rgb(48, 151, 253); /* Add background color on hover */
+    }
+    
+/* SECTION 1 */
+.section-with-bg h1 {
+    font-size: 4rem;
+}
+
+.section-with-bg p {
+    font-size: 2.5rem;
+}
+
+.section-with-bg {
+    position: relative; /* Needed for the overlay to position correctly */
+    background-image: url(./images/skills.png); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-with-bg::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+
+.flex-container1 {
+    position: relative;
+    z-index: 2; /* Ensures the text is above the overlay */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+.div2 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.div2 h2 {
+    /* border: 5px solid blue; */
+    margin: 20px;
+    font-size: 3rem;
+    line-height: 45px;
+}
+
+
+.mech-span {
+    color: #888787;
+}
+
+
+.p1, .p2 {
+    line-height: 70px;
+    font-size: 2rem;
+}
+
+.p1 {
+    margin-bottom: 0px;
+}
+
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+.img1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 auto;
+    /* background-color: black; */
+
+}
+
+.skill-section {
+    margin-top: 50px;
+}
+
+img {
+    width: 35%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+img:hover {
+    transform: translateY(-5px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+    
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+
+.social-links {
+    display: flex;
+    margin: 3%;
+    justify-content: center;
+    gap: 10%;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.linksvg {
+    height: 30px;
+}
+
+.gitsvg {
+    height: 30px;
+}
+
+.instasvg {
+    height: 33px;
+}
+}
+
+@media (max-width: 1280px) {
+    .navbar {
+        /* border: 5px solid black; */
+        padding-left: 35px;
+        padding-right: 35px;
+        margin: 10px;
+        /* border: 5px solid red; */
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 65px;
+        /* border: 5px solid red; */
+        list-style: none;
+    }
+    
+    .navbar li a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px; /* Add some padding for better hover effect */
+        border-radius: 5px; /* Add rounded corners for hover effect */
+    }
+    
+    /* Add hover effect */
+    .navbar li a:hover {
+        color: rgb(0, 0, 0); /* Change text color on hover */
+        color: rgb(48, 151, 253); /* Add background color on hover */
+    }
+    
+/* SECTION 1 */
+.section-with-bg h1 {
+    font-size: 3rem;
+}
+
+.section-with-bg p {
+    font-size: 2rem;
+}
+
+.section-with-bg {
+    position: relative; /* Needed for the overlay to position correctly */
+    background-image: url(./images/skills.png); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-with-bg::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+
+.flex-container1 {
+    position: relative;
+    z-index: 2; /* Ensures the text is above the overlay */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+.div2 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.div2 h2 {
+    /* border: 5px solid blue; */
+    margin-bottom: 0px;
+    font-size: 2.5rem;
+    line-height: 45px;
+}
+
+
+.mech-span {
+    color: #888787;
+}
+
+
+.p1, .p2 {
+    line-height: 60px;
+    font-size: 1.5rem;
+}
+
+.p1 {
+    margin-bottom: 0px;
+}
+
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+.img1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 auto;
+    /* background-color: black; */
+
+}
+
+.skill-section {
+    margin-top: 50px;
+}
+
+img {
+    width: 55%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+img:hover {
+    transform: translateY(-5px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+    
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+
+.social-links {
+    display: flex;
+    margin: 3%;
+    justify-content: center;
+    gap: 70px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.linksvg {
+    height: 15px;
+}
+
+.gitsvg {
+    height: 15px;
+}
+
+.instasvg {
+    height: 15px;
+}
+}
+
+@media (max-width: 820px) {
+    .navbar {
+        /* border: 5px solid black; */
+        padding-left: 35px;
+        padding-right: 35px;
+        margin: 10px;
+        /* border: 5px solid red; */
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        /* border: 5px solid red; */
+        list-style: none;
+    }
+    
+    .navbar li a {
+        font-size: 1rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px; /* Add some padding for better hover effect */
+        border-radius: 5px; /* Add rounded corners for hover effect */
+    }
+    
+    /* Add hover effect */
+    .navbar li a:hover {
+        color: rgb(0, 0, 0); /* Change text color on hover */
+        color: rgb(48, 151, 253); /* Add background color on hover */
+    }
+    
+
+/* SECTION 1 */
+.section-with-bg h1 {
+    font-size: 2rem;
+}
+
+.section-with-bg p {
+    font-size: 1.4rem;
+}
+
+.section-with-bg {
+    position: relative; /* Needed for the overlay to position correctly */
+    background-image: url(./images/skills.png); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-with-bg::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+
+
+.div2 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.div2 h2 {
+    /* border: 5px solid blue; */
+    margin-bottom: 0px;
+    font-size: 1.8rem;
+    line-height: 45px;
+}
+
+
+.mech-span {
+    color: #888787;
+}
+
+
+.p1, .p2 {
+    line-height: 50px;
+    font-size: 1.2rem;
+}
+
+.p1 {
+    margin-bottom: 0px;
+}
+
+
+.course {
+    color:#888787;
+    font-weight: 555;
+}
+
+
+
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+.img1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 auto;
+    /* background-color: black; */
+
+}
+
+.skill-section {
+    margin-top: 50px;
+}
+
+img {
+    width: 55%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+img:hover {
+    transform: translateY(-5px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+    
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+
+.social-links {
+    display: flex;
+    margin: 3%;
+    justify-content: center;
+    gap: 70px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.linksvg {
+    height: 15px;
+}
+
+.gitsvg {
+    height: 15px;
+}
+
+.instasvg {
+    height: 15px;
+}
+
+}
+
+@media (max-width: 515px) {
+    .navbar {
+        /* border: 5px solid black; */
+        padding-left: 35px;
+        padding-right: 35px;
+        margin: 10px;
+        /* border: 5px solid red; */
+    }
+    
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        /* border: 5px solid red; */
+        list-style: none;
+    }
+    
+    .navbar li a {
+        font-size: 0.8rem;
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        transition: color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px; /* Add some padding for better hover effect */
+        border-radius: 5px; /* Add rounded corners for hover effect */
+    }
+    
+    /* Add hover effect */
+    .navbar li a:hover {
+        color: rgb(0, 0, 0); /* Change text color on hover */
+        color: rgb(48, 151, 253); /* Add background color on hover */
+    }
+    
+
+/* SECTION 1 */
+.section-with-bg h1 {
+    font-size: 1.8rem;
+}
+
+.section-with-bg p {
+    font-size: 1rem;
+}
+
+.section-with-bg {
+    position: relative; /* Needed for the overlay to position correctly */
+    background-image: url(./images/skills.png); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-with-bg::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+
+
+.div2 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+}
+
+.div2 h2 {
+    /* border: 5px solid blue; */
+    margin-bottom: 0px;
+    font-size: 1.5rem;
+    line-height: 45px;
+}
+
+.div2 h3 {
+    font-size: 1.3rem;
+}
+
+.mech-span {
+    color: #888787;
+}
+
+
+.p1, .p2 {
+    line-height: 40px;
+    font-size: 1rem;
+}
+
+.p1 {
+    margin-bottom: 0px;
+}
+
+
+.course {
+    color:#888787;
+    font-weight: 555;
+}
+
+
+
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+.img1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0 auto;
+    /* background-color: black; */
+
+}
+
+img {
+    width: 75%; /* Adjusts the width of the image */
+    max-width: 100%; /* Ensures the image can never be larger than its container */
+    height: auto; /* Ensures the height adjusts automatically based on the width */
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+img:hover {
+    transform: translateY(-5px); /* Moves the card up slightly on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Adds stronger shadow on hover */
+}
+    
+.custom-hr {
+    width: 90%;  /* Adjust the width to control the length of the line */
+    margin: 20px auto;  /* Centers the line and adds space above and below */
+    border: 1px solid #b9b9b9;  /* Sets the color and thickness of the line */
+}
+
+
+.social-links {
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.linksvg {
+    height: 12px;
+}
+
+.gitsvg {
+    height: 12px;
+}
+
+.instasvg {
+    height: 12px;
+}
+
+}
+
